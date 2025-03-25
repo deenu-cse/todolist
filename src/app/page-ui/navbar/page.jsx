@@ -50,7 +50,7 @@ const NavBar = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:9000/login", {
+      const response = await axios.post("https://to-do-backend-peach.vercel.app/login", {
         email,
         password,
       });
@@ -69,7 +69,7 @@ const NavBar = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:9000/signup", {
+      const response = await axios.post("https://to-do-backend-peach.vercel.app/signup", {
         username,
         email,
         password,

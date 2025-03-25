@@ -33,7 +33,7 @@ const ToDo = () => {
     const fetchTasks = async () => {
       try {
         const token = localStorage.getItem("authToken");
-        const { data } = await axios.get("http://localhost:9000/tasks", {
+        const { data } = await axios.get("https://to-do-backend-peach.vercel.app/tasks", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setTasks(data);
@@ -53,7 +53,7 @@ const ToDo = () => {
     try {
       const token = localStorage.getItem("authToken");
       const { data } = await axios.post(
-        "http://localhost:9000/tasks",
+        "https://to-do-backend-peach.vercel.app/tasks",
         { title: inputValue },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -68,7 +68,7 @@ const ToDo = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:9000/tasks/${id}`);
+      await axios.delete(`https://to-do-backend-peach.vercel.app/tasks/${id}`);
 
       setTasks((prev) => prev.filter((task) => task._id !== id));
     } catch (error) {
@@ -79,7 +79,7 @@ const ToDo = () => {
   const handleUpdate = async (id, updatedData) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:9000/tasks/${id}`,
+        `https://to-do-backend-peach.vercel.app/tasks/${id}`,
         updatedData,
       );
 
