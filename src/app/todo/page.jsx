@@ -90,7 +90,7 @@ const ToDo = () => {
   };
 
   return (
-    <div className="h-[40rem] -mt-24 flex flex-col justify-center items-center px-4">
+    <div className="h-[40rem] -mt-16 flex flex-col justify-center items-center px-4">
       {isToken ? (
         <>
           <h2 className="mb-10 text-xl text-center dark:text-white">
