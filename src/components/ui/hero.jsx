@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
-const Hero = React.forwardRef<HTMLElement, HeroProps>(
+const Hero = React.forwardRef(
   (
     {
       className,
